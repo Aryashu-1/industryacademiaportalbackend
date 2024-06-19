@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-const userModel = require('../collections/usercollectionmodel');
+const userModel = require('../../collections/usercollectionmodel');
 
 async function resetPasswordController(req, res) {
   try {

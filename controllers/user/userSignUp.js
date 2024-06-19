@@ -1,4 +1,4 @@
-const userCollection = require('../collections/usercollectionmodel');
+const userCollection = require('../../collections/usercollectionmodel');
 const bcrypt = require('bcryptjs');
 
 async function createUser(userData) {
