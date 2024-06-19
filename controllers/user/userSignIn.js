@@ -1,20 +1,20 @@
 const bcrypt = require('bcryptjs');
-const userModel = require('../collections/usercollectionmodel');
+const userModel = require('../../collections/usercollectionmodel');
 const jwt = require('jsonwebtoken');
 
 async function userSignInController(req, res) {
   console.log(req.body);
   try {
-    const { email, password } = req.body;
+    const { name, password } = req.body;
 
-    if (!email) {
+    if (!name) {
       throw new Error('Please Provide the Email');
     }
     if (!password) {
       throw new Error('Please Provide the Password');
     }
 
-    const user = await userModel.findOne({ email });
+    const user = await userModel.findOne({ name });
 
     if (!user) {
       throw new Error('User Not Found');
@@ -28,7 +28,7 @@ async function userSignInController(req, res) {
       // Password is correct
       const tokenData = {
         _id: user.id,
-        email: user.email
+        name: user.name
       };
       const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET_KEY, { expiresIn: 60 * 60 * 8 });
       const tokenOption = {

@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const userModel = require('../collections/usercollectionmodel');
+const userModel = require('../../collections/usercollectionmodel');
 const nodemailer = require('nodemailer');
 
 async function generateResetTokenController(req, res) {

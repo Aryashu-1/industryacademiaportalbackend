@@ -1,4 +1,4 @@
-const userCollection = require('../collections/usercollectionmodel');
+const userCollection = require('../../collections/usercollectionmodel');
 
 async function userUpdateController(req, res) {
   try {
