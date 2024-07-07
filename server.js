@@ -2,7 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const connectDB=require('./config/db')
 require('dotenv').config()
-const router=require("./routes/index")
+const router=require("./routes")
 const app=express()
 app.use(cors({
     origin:process.env.FRONTEND_URL,
