@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect('mongodb+srv://siddojumayanbrahmam:Kundy@fieldproject.gyknnkp.mongodb.net/FieldProject?retryWrites=true&w=majority&appName=FieldProject', {
+    const conn = await mongoose.connect('mongodb+srv://kundybrahmam:Kundy%402005@fieldproject.pm2poxe.mongodb.net/FieldProject?retryWrites=true&w=majority&appName=FieldProject', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
